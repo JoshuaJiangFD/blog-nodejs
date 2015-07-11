@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/lib/css/bootstrap.min.css' />
+    <link rel='stylesheet' href='/stylesheets/login.css' />
+    <link rel='stylesheet' href='/stylesheets/blog.css' />
+</head>
+<body>
+    <% include partials/header %>
+    <div class="container login">
+        <div class="login-container">
+            <form method="post" action="/post" class="login-form well span4">
+                <h1>Hello!</h1>
+                <p class="subheading">Please Login To Your Account</p>
+                <label>Username</label>
+                <input type="text" name="user" id="user-tf" class="span4 required">
+                <label>Password</labeL>
+                <input type="password" name="pass" id="pass-tf" class="span4 required">
+                <button type="submit" id="btn-login" class="btn btn-primary">
+                    <i class="glyphicon-lock icon-white"></i>Login
+                </button>
+                <label id="remember-me" class="checkbox">
+                    Remember Me
+                    <input type="checkbox" checked="checked">
+                </label>
+                <hr>
+                <div class="btn-links">
+                    <a href="#" id="forgot-password">Forgot Your Password</a>
+                    <a href="/signup" id="create-account">Create An Account</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <% include partials/scripts %>
+</body>
+</html>
